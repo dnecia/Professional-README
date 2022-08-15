@@ -46,6 +46,11 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   * [Usage](#usage)
   ${renderLicenseLink(data.license)}
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+
+
 
 
   ## Installation
@@ -56,7 +61,22 @@ function generateMarkdown(data) {
 
   ${renderLicenseSection(data.license)}
 
-`;
+
+  ## Contributing 
+  ${data.contributionGuidelines}
+  
+  ## Tests
+  To run tests, run the following:
+  \`
+  ${data.testInstructions}
+  \`
+  ## Questions
+  Questions about this repository? Please contact me at [${
+    data.email
+  }](mailto:${data.email}). View more of my work in GitHub at [${
+    data.github
+  }](https://github.com/${data.github}) 
+  `;
 }
 
 module.exports = generateMarkdown;
